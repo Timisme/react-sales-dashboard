@@ -1,5 +1,5 @@
 import { createContext, useState, useMemo } from "react";
-import { createTheme, Theme, ThemeOptions } from "@mui/material/styles";
+import { createTheme, ThemeOptions, Theme } from "@mui/material/styles";
 
 type Mode = "light" | "dark";
 
@@ -195,12 +195,18 @@ export const themeSettings = (mode: Mode): ThemeOptions => {
   };
 };
 
-// context for color mode
+// 建立 context 將底下元件都轉換 color mode
 export const ColorModeContext = createContext({
   toggleColorMode: () => {}
 });
 
-export const useMode = () => {
+// 提供讀取 theme 和更改 theme 的方法
+
+interface IColorMode {
+  toggleColorMode: () => void;
+}
+
+export const useMode = (): [Theme, IColorMode] => {
   const [mode, setMode] = useState<Mode>("dark");
 
   const colorMode = useMemo(
