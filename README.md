@@ -12,3 +12,4 @@ React, Material UI, Nivo Charts, Formik, Yup, FullCalendar, and Data Grid
 - Yup
 - FullCalendar
 - Data Grid
+- react-pro-sidebar
