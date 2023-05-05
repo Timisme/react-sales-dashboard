@@ -68,6 +68,9 @@ const Sidebar = () => {
         },
         "& .pro-menu-item.active": {
           color: "#6870fa !important"
+        },
+        "& .pro-sidebar": {
+          height: "auto"
         }
       }}
     >
