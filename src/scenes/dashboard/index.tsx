@@ -56,7 +56,7 @@ const Dashboard = () => {
         >
           <StatBox
             title="12,361"
-            subtitle="Emails Sent"
+            subtitle="寄出郵件"
             progress={0.75}
             increase="+14%"
             icon={
@@ -75,7 +75,7 @@ const Dashboard = () => {
         >
           <StatBox
             title="431,225"
-            subtitle="Sales Obtained"
+            subtitle="業務績效"
             progress={0.5}
             increase="+21%"
             icon={
@@ -94,7 +94,7 @@ const Dashboard = () => {
         >
           <StatBox
             title="32,441"
-            subtitle="New Clients"
+            subtitle="新客獲取"
             progress={0.3}
             increase="+5%"
             icon={
@@ -113,7 +113,7 @@ const Dashboard = () => {
         >
           <StatBox
             title="1,325,134"
-            subtitle="Traffic Received"
+            subtitle="流量導入"
             progress={0.8}
             increase="+43%"
             icon={
@@ -176,7 +176,6 @@ const Dashboard = () => {
             justifyContent="space-between"
             alignItems="center"
             borderBottom={`4px solid ${colors.primary[500]}`}
-            // colors={colors.grey[100]}
             sx={{ colors: colors.grey[100] }}
             p="15px"
           >
@@ -225,7 +224,7 @@ const Dashboard = () => {
           sx={{ backgroundColor: colors.primary[400] }}
         >
           <Typography variant="h5" fontWeight="600">
-            Campaign
+            行銷活動
           </Typography>
           <Box
             display="flex"
@@ -241,7 +240,7 @@ const Dashboard = () => {
             >
               $48,352 收益收入
             </Typography>
-            <Typography>Includes extra misc expenditures and costs</Typography>
+            <Typography>包含雜項開銷</Typography>
           </Box>
         </Box>
         <Box
@@ -254,7 +253,7 @@ const Dashboard = () => {
             fontWeight="600"
             sx={{ padding: "30px 30px 0 30px" }}
           >
-            Sales Quantity
+            業務績效
           </Typography>
           <Box height="250px" mt="-20px">
             <BarChart isDashboard={true} />
@@ -271,7 +270,7 @@ const Dashboard = () => {
             fontWeight="600"
             sx={{ marginBottom: "15px" }}
           >
-            Geography Based Traffic
+            全球流量
           </Typography>
           <Box height="200px">
             <GeographyChart isDashboard={true} />
