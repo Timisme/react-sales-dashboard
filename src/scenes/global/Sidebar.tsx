@@ -110,7 +110,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`../../assets/react.svg`}
+                  src={`/react-sales-dashboard/assets/react.svg`}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
