@@ -8,6 +8,7 @@ React, Material UI, Nivo Charts, Formik, Yup, FullCalendar, and Data Grid
 
 - Material UI
 - Nivo：nivo provides supercharged React components to easily build dataviz apps, it's built on top of d3.
+  - 可於線上調整參數直接呈現圖表以及對應的圖表程式碼，非常方便
 - Formik
 - Yup
   - validation functions
