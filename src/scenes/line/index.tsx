@@ -7,7 +7,7 @@ const Line = () => {
     <Box m="20px">
       <Header title="折線圖" subtitle="展示折線圖" />
       <Box height="75vh">
-        <LineChart isDashboard={false} isCustomLineColors={false} />
+        <LineChart isDashboard={false} />
       </Box>
     </Box>
   );

@@ -4,14 +4,10 @@ import { tokens } from "../theme";
 import { mockLineData as data } from "../data/mockData";
 
 interface LineChartProps {
-  isCustomLineColors: boolean;
   isDashboard: boolean;
 }
 
-const LineChart = ({
-  isCustomLineColors = false,
-  isDashboard = false
-}: LineChartProps) => {
+const LineChart = ({ isDashboard = false }: LineChartProps) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -66,7 +62,6 @@ const LineChart = ({
       axisTop={null}
       axisRight={null}
       axisBottom={{
-        orient: "bottom",
         tickSize: 0,
         tickPadding: 5,
         tickRotation: 0,
@@ -75,7 +70,6 @@ const LineChart = ({
         legendPosition: "middle"
       }}
       axisLeft={{
-        orient: "left",
         tickValues: 5, // added
         tickSize: 3,
         tickPadding: 5,
