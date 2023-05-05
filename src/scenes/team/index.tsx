@@ -1,14 +1,15 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataTeam } from "../../data/mockData";
 import Header from "../../components/Header";
 import getColumns from "./utils";
+import { GridColDef } from "@mui/x-data-grid";
 
 const Team = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const columns = getColumns(colors);
+  const columns: GridColDef[] = getColumns(colors);
   return (
     <Box m="20px">
       <Header title="團隊" subtitle="成員管理" />

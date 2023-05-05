@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Typography } from "@mui/material";
 
 const getColumn = (colors: any) => [
   { field: "id", headerName: "ID" },
@@ -22,7 +22,7 @@ const getColumn = (colors: any) => [
     field: "cost",
     headerName: "Cost",
     flex: 1,
-    renderCell: (params) => (
+    renderCell: (params: any) => (
       <Typography color={colors.greenAccent[500]}>
         ${params.row.cost}
       </Typography>

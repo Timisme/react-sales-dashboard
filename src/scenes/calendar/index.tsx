@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
-import { formatDate } from "@fullcalendar/core";
+import { formatDate, EventApi } from "@fullcalendar/core";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
@@ -16,18 +16,12 @@ import {
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
 
-interface IEvent {
-  id: string;
-  title: string;
-  start: Date;
-}
-
 const Calendar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [currentEvents, setCurrentEvents] = useState<IEvent[]>([]);
+  const [currentEvents, setCurrentEvents] = useState<EventApi[]>([]);
 
-  const handleDateClick = (selected) => {
+  const handleDateClick = (selected: any) => {
     const title = prompt("請輸入事件名稱");
     const calendarApi = selected.view.calendar;
     calendarApi.unselect();
@@ -43,7 +37,7 @@ const Calendar = () => {
     }
   };
 
-  const handleEventClick = (selected) => {
+  const handleEventClick = (selected: any) => {
     if (window.confirm(`確定要刪除事件 '${selected.event.title}'?`)) {
       selected.event.remove();
     }
@@ -76,11 +70,13 @@ const Calendar = () => {
                   primary={event.title}
                   secondary={
                     <Typography>
-                      {formatDate(event.start, {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric"
-                      })}
+                      {event.start
+                        ? formatDate(event.start, {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric"
+                          })
+                        : null}
                     </Typography>
                   }
                 />

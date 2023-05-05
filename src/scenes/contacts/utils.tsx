@@ -1,4 +1,6 @@
-const getColumns = () => {
+import { GridColDef } from "@mui/x-data-grid";
+
+const getColumns = (): GridColDef[] => {
   return [
     { field: "id", headerName: "ID", flex: 0.5 },
     { field: "registrarId", headerName: "Registrar ID" },

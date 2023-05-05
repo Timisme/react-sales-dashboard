@@ -16,7 +16,7 @@ const enum FieldLabel {
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = (values: any) => {
     console.log(values);
   };
 

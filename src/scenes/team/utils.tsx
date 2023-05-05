@@ -2,9 +2,10 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import { Box, Typography } from "@mui/material";
+import { GridColDef } from "@mui/x-data-grid";
 
-function getColumns(colors: any) {
-  const columns = [
+function getColumns(colors: any): GridColDef[] {
+  const columns: GridColDef[] = [
     { field: "id", headerName: "ID" },
     {
       field: "name",
@@ -33,7 +34,7 @@ function getColumns(colors: any) {
       field: "accessLevel",
       headerName: "Access Level",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
+      renderCell: ({ row: { access } }: any) => {
         return (
           <Box
             width="60%"
