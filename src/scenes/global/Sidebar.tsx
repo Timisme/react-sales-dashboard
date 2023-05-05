@@ -121,10 +121,10 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  產品名稱
+                  業務管理系統
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  儀表板管理系統
+                  儀表板
                 </Typography>
               </Box>
             </Box>
